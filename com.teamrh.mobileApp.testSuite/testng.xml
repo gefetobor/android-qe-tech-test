@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="com.teamrh.mobileApp.testSuite">
+	<parameter name="os" value="${os}" />
+	<listeners>
+		<listener class-name="UITestFramework.retryLogic.TestListener" />
+		<!-- uncomment RetryListener to enable retries. update the maxRetryCount value in the Retry class-->
+		<!--<listener class-name="UITestFramework.retryLogic.RetryListener"/>-->
+	</listeners>
+	<test name="automation-tests">
+		<!--<packages>
+			<package name="tests.testngTests" />			
+		</packages> -->
+		<classes>
+			<class name="tests.testngTests.End2EndTests" />
+			<!-- <class name="tests.testngTests.OneToFourCardTests" />
+			<class name="tests.testngTests.NineToElevenCardTests" />
+			<class name="tests.testngTests.FiveToEightCardTests" />
+			<class name="tests.testngTests.End2EndTests" />
+			-->
+		</classes>
+	</test>
+</suite>
