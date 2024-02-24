@@ -48,7 +48,9 @@ Single code base framework to test android and iOS app using appium.
 **GenericMethods.java** : It is a common repository for all the  webdriver and appium methods which are called in each coreLogic classes. Every new method which is being used in coreLogic classes should be added in this class as well. It is to reduce the duplicate code. Each screen class extends this class. Below are few methods defined in this class:
 
 waitForVisibility(By targetElement) - method to wait for an element to be visible
+
 findElement(By locator) - method to find an element
+
 findElements(By locator) - method to find all the elements of specific locator
 
 **MysqlDatabase.java** : This can be used if any DB values need to be verifiedIt has method to read DB and get data from required table. For more help, read on this link: http://www.vogella.com/tutorials/MySQLJava/article.html
