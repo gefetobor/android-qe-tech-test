@@ -11,7 +11,7 @@ Single code base framework to test android and iOS app using appium.
 
 - Install Maven in your machine. Maven is a build tool (can be downloaded from [here](https://maven.apache.org/download.cgi)). pom.xml file is present in base directory which has all the required dependencies and code to invoke testng.xml file when executed from command line.
 
-- Framework is setup with testng tests, Also used for execution.
+- Framework is setup with testng tests, also used for execution.
 
 ## Running sample test
 
@@ -53,7 +53,7 @@ findElement(By locator) - method to find an element
 
 findElements(By locator) - method to find all the elements of specific locator
 
-**MysqlDatabase.java** : This can be used if any DB values need to be verifiedIt has method to read DB and get data from required table. For more help, read on this link: http://www.vogella.com/tutorials/MySQLJava/article.html
+**MysqlDatabase.java** : This can be used if any DB values need to be verified. It has method to read DB and get data from required table. For more help, read on this link: http://www.vogella.com/tutorials/MySQLJava/article.html
 
 
 **Package : app** : It contains the app build against which tests would be executed. 
@@ -80,7 +80,6 @@ findElements(By locator) - method to find all the elements of specific locator
 **Package: screens** : Classes in this package contains locators which are being used in coreLogic classes. Each page in mobile application is mapped to screen. E.g. for android login page, its AndroidLoginScreen. Segregated the locators on the bases of platform: android or iOS
 
 **Package: screens.android** : Each screen on andriod app will be having as screen class under this package. It contains all the locators which are visible on that screen. Each android screen class extends GenericMethods.java. 
-
 
 **Package: screens.ios** : Each screen on ios app will be having as screen class under this package. It contains all the locators which are visible on that screen. Each iOS screen class extends GenericMethods.java. 
 
