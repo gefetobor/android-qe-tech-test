@@ -30,8 +30,6 @@ Single code base framework to test android and iOS app using appium.
 
 **retryLogic** : It has classes to implement retry in case of failure of a test. Retry count  is set to 1 as of now. Test will be run once if it fails during the execution. 
 
-Add below listener to testng.xml file to include retry functionality.
-
 
 **CreateSession.java** : All the methods to create a new session and destroy the session after the test(s) execution is over. Each test extends this class. Below are the methods in CreateSession class in their execution order.
 
