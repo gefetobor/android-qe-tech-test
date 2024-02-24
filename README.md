@@ -11,7 +11,7 @@ Single code base framework to test android and iOS app using appium.
 
 - Install Maven in your machine. Maven is a build tool (can be downloaded from [here](https://maven.apache.org/download.cgi)). pom.xml file is present in base directory which has all the required dependencies and code to invoke testng.xml file when executed from command line.
 
-- Framework is setup with testng tests, Also used for execution.
+- Framework is setup with testng tests, also used for execution.
 
 ## Running sample test
 
@@ -30,8 +30,6 @@ Single code base framework to test android and iOS app using appium.
 
 **retryLogic** : It has classes to implement retry in case of failure of a test. Retry count  is set to 1 as of now. Test will be run once if it fails during the execution. 
 
-Add below listener to testng.xml file to include retry functionality.
-
 
 **CreateSession.java** : All the methods to create a new session and destroy the session after the test(s) execution is over. Each test extends this class. Below are the methods in CreateSession class in their execution order.
 
@@ -39,7 +37,7 @@ Add below listener to testng.xml file to include retry functionality.
 
 2. createDriver(String os, Method methodName) - method creates the driver depending upon the passed parameter (android or iOS) and loads the properties files (config and test data properties files).
 
-3. Tests execution (tests are present in IntegrationTests.tests package)
+3. Tests execution (tests are present in tests.testngtests package)
 
 4. teardown() - method quit the driver after the execution of test(s) 
 
@@ -50,10 +48,12 @@ Add below listener to testng.xml file to include retry functionality.
 **GenericMethods.java** : It is a common repository for all the  webdriver and appium methods which are called in each coreLogic classes. Every new method which is being used in coreLogic classes should be added in this class as well. It is to reduce the duplicate code. Each screen class extends this class. Below are few methods defined in this class:
 
 waitForVisibility(By targetElement) - method to wait for an element to be visible
+
 findElement(By locator) - method to find an element
+
 findElements(By locator) - method to find all the elements of specific locator
 
-**MysqlDatabase.java** : This can be used if any DB values need to be verifiedIt has method to read DB and get data from required table. For more help, read on this link: http://www.vogella.com/tutorials/MySQLJava/article.html
+**MysqlDatabase.java** : This can be used if any DB values need to be verified. It has method to read DB and get data from required table. For more help, read on this link: http://www.vogella.com/tutorials/MySQLJava/article.html
 
 
 **Package : app** : It contains the app build against which tests would be executed. 
@@ -80,7 +80,6 @@ findElements(By locator) - method to find all the elements of specific locator
 **Package: screens** : Classes in this package contains locators which are being used in coreLogic classes. Each page in mobile application is mapped to screen. E.g. for android login page, its AndroidLoginScreen. Segregated the locators on the bases of platform: android or iOS
 
 **Package: screens.android** : Each screen on andriod app will be having as screen class under this package. It contains all the locators which are visible on that screen. Each android screen class extends GenericMethods.java. 
-
 
 **Package: screens.ios** : Each screen on ios app will be having as screen class under this package. It contains all the locators which are visible on that screen. Each iOS screen class extends GenericMethods.java. 
 
