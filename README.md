@@ -37,7 +37,7 @@ Single code base framework to test android and iOS app using appium.
 
 2. createDriver(String os, Method methodName) - method creates the driver depending upon the passed parameter (android or iOS) and loads the properties files (config and test data properties files).
 
-3. Tests execution (tests are present in IntegrationTests.tests package)
+3. Tests execution (tests are present in tests.testngtests package)
 
 4. teardown() - method quit the driver after the execution of test(s) 
 
