@@ -2,7 +2,7 @@ package UITestFramework;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
-import io.appium.java_client.remote.MobileCapabilityType;
+//import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.appium.java_client.service.local.flags.GeneralServerFlag;
@@ -50,6 +50,7 @@ public class CreateSession  {
 	public void invokeAppium() throws Exception
 	{
 		String OS = System.getProperty("os.name").toLowerCase();
+		Log.info("This is the " + OS);
 		try{
 			startAppiumServer(OS);
 			Log.info("Appium server started successfully");
@@ -139,7 +140,8 @@ public class CreateSession  {
 		capabilities.setCapability("app", app.getAbsolutePath());
 		// added "MobileCapabilityType.FULL_RESET" capability to start app in fresh state (logout).
 		// Remove it if not required
-		capabilities.setCapability(MobileCapabilityType.FULL_RESET, true);
+		//capabilities.setCapability(MobileCapabilityType.FULL_RESET, true);
+		capabilities.setCapability("noRest", true);
 		capabilities.setCapability("automationName", "UiAutomator2");
 		driver = new AndroidDriver( appiumService.getUrl(), capabilities);
 
@@ -160,12 +162,41 @@ public class CreateSession  {
 		capabilities.setCapability("name", methodName.getName());
 		capabilities.setCapability("deviceName", "iPhone 15");
 		//capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"iPhone 5s"); 
+		capabilities.setCapability("noRest", true);
 		capabilities.setCapability("app", app.getAbsolutePath());
+		capabilities.setCapability("automationName", "Xcuitest");
 		driver  = new IOSDriver( appiumService.getUrl(), capabilities);
 
 	}
 
+	public void startAppiumServer2(String os) throws IOException, InterruptedException {
+		   //Set Capabilities
+	//	DesiredCapabilities cap = new DesiredCapabilities();
+	 //   cap = new DesiredCapabilities();
+	 //   cap.setCapability("noReset", "true");
 
+	    //Build the Appium service
+	    builder = new AppiumServiceBuilder();
+	    builder.withIPAddress("127.0.0.1");
+	    builder.usingPort(4723);
+	   // builder.withCapabilities(cap);
+	    builder.withArgument(GeneralServerFlag.SESSION_OVERRIDE);
+	    builder.withArgument(GeneralServerFlag.LOG_LEVEL,"error");
+
+	    //Start the server with the builder
+	    appiumService = AppiumDriverLocalService.buildService(builder);
+	    appiumService.start();
+	    Log.info("appiumService Started");
+	}
+
+	public void stopAppiumServer2(String os) throws ExecuteException, IOException {
+	    if (appiumService != null) {
+			appiumService.stop();
+			Log.info("Appium server stopped");
+		} else {
+			Log.logError(getClass().getName(), getClass().getEnclosingMethod().getName(),"Appium server fail to stopped");
+		}
+	}
 
 	/** 
 	 *  this method starts the appium  server depending on your OS.
@@ -180,7 +211,7 @@ public class CreateSession  {
 		private static AppiumServiceBuilder builder;
 	public void startAppiumServer(String os) throws IOException, InterruptedException{
 		if (os.contains("windows")){
-			 builder = new AppiumServiceBuilder()
+			 builder = new AppiumServiceBuilder()	
 					.usingAnyFreePort()
 					.withArgument(GeneralServerFlag.SESSION_OVERRIDE)
 					.withArgument(GeneralServerFlag.LOG_LEVEL, "error");
@@ -190,8 +221,10 @@ public class CreateSession  {
 		else if (os.contains("mac os x")){
 			builder = new AppiumServiceBuilder()
 					.usingAnyFreePort()
+					.withArgument(() -> "--base-path", "/")
 					.withArgument(GeneralServerFlag.SESSION_OVERRIDE)
 					.withArgument(GeneralServerFlag.LOG_LEVEL, "error");
+					
 		}
 
 		else if (os.contains("linux")){
@@ -215,6 +248,7 @@ public class CreateSession  {
 		}
 
 		appiumService = builder.build();
+		Log.info( "Builder is building");
 		appiumService.start();
 		Log.info("Appium started on " + appiumService.getUrl());
 	}

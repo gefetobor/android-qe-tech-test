@@ -6,8 +6,6 @@ package coreLogic.base;
  */
 public abstract class LandingPageCoreLogic {
 
-
-
 	public abstract void verifyFirstCard() throws InterruptedException;
 	
 	public abstract void verifySecondCard() throws InterruptedException;
@@ -30,6 +28,10 @@ public abstract class LandingPageCoreLogic {
 	
 	public abstract void verifyEleventhCard() throws InterruptedException;
 	
-	public abstract void searchFunctionality() throws InterruptedException;
+	public abstract void searchFunctionality(String shortcut) throws InterruptedException;
+	
+	public  void verifyFirstCardr() throws InterruptedException{
+		
+	};
 
 }

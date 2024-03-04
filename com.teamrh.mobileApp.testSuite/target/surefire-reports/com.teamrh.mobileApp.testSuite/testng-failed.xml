@@ -7,19 +7,6 @@
   </listeners>
   <test thread-count="5" name="automation-tests(failed)" verbose="0">
     <classes>
-      <class name="tests.testngTests.OneToFourCardTests">
-        <methods>
-          <include name="teardown"/>
-          <include name="secondCardTests"/>
-          <include name="firstCardTests"/>
-          <include name="stopAppium"/>
-          <include name="createDriver"/>
-          <include name="instantiateHelpers"/>
-          <include name="fourthCardTests"/>
-          <include name="invokeAppium"/>
-          <include name="thirdCardTests"/>
-        </methods>
-      </class> <!-- tests.testngTests.OneToFourCardTests -->
       <class name="tests.testngTests.End2EndTests">
         <methods>
           <include name="teardown"/>

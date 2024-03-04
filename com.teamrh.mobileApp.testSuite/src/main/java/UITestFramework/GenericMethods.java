@@ -1,16 +1,16 @@
 package UITestFramework;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileDriver;
-import io.appium.java_client.TouchAction;
+import io.appium.java_client.*;
+import io.appium.java_client.remote.SupportsContextSwitching;
 import io.appium.java_client.android.AndroidDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.interactions.PointerInput;
+import org.openqa.selenium.interactions.Sequence;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
 import io.appium.java_client.android.connection.ConnectionState;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
-import io.appium.java_client.touch.LongPressOptions;
-import io.appium.java_client.touch.WaitOptions;
-import io.appium.java_client.touch.offset.ElementOption;
-import io.appium.java_client.touch.offset.PointOption;
 import logger.Log;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -48,10 +48,11 @@ public class GenericMethods {
 
     /**
      * method to hide keyboard
-     */
+     
     public void hideKeyboard() {
         ((AppiumDriver) driver).hideKeyboard();
     }
+    */
 
     /**
      * method to go back by Android Native back click
@@ -68,7 +69,7 @@ public class GenericMethods {
      */
     public boolean waitForVisibility(By targetElement) {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, timeOut);
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
             wait.until(ExpectedConditions.visibilityOfElementLocated(targetElement));
             return true;
         } catch (TimeoutException e) {
@@ -86,7 +87,7 @@ public class GenericMethods {
      */
     public boolean waitForInvisibility(By targetElement) {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, timeOut);
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
             wait.until(ExpectedConditions.invisibilityOfElementLocated(targetElement));
             return true;
         } catch (TimeoutException e) {
@@ -167,7 +168,7 @@ public class GenericMethods {
      */
     public boolean isAlertPresent() {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, timeOut);
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
             wait.until(ExpectedConditions.alertIsPresent());
             driver.switchTo().alert();
             return true;
@@ -181,7 +182,7 @@ public class GenericMethods {
      */
 
     public void acceptAlert() {
-        WebDriverWait wait = new WebDriverWait(driver, timeOut);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
         wait.until(ExpectedConditions.alertIsPresent());
         driver.switchTo().alert().accept();
     }
@@ -191,7 +192,7 @@ public class GenericMethods {
      */
 
     public void dismissAlert() {
-        WebDriverWait wait = new WebDriverWait(driver, timeOut);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
         wait.until(ExpectedConditions.alertIsPresent());
         driver.switchTo().alert().dismiss();
     }
@@ -231,7 +232,8 @@ public class GenericMethods {
      * method to get all the context handles at particular screen
      */
     public void getContext() {
-        ((AppiumDriver) driver).getContextHandles();
+        ((SupportsContextSwitching) driver).getContextHandles();
+        
     }
 
     /**
@@ -241,77 +243,19 @@ public class GenericMethods {
      */
     public void setContext(String context) {
 
-        Set<String> contextNames = ((AppiumDriver) driver).getContextHandles();
+        Set<String> contextNames = ((SupportsContextSwitching) driver).getContextHandles();
 
         if (contextNames.contains(context)) {
-            ((AppiumDriver) driver).context(context);
+            ((SupportsContextSwitching) driver).context(context);
             Log.info("Context changed successfully");
         } else {
             Log.info(context + "not found on this page");
         }
 
-        Log.info("Current context" + ((AppiumDriver) driver).getContext());
+        Log.info("Current context" + ((SupportsContextSwitching) driver).getContext());
     }
 
-    /**
-     * method to long press on specific element by passing locator
-     *
-     * @param locator element to be long pressed
-     */
-    public void longPress(By locator) {
-        try {
-            WebElement element = driver.findElement(locator);
-
-            TouchAction touch = new TouchAction((MobileDriver) driver);
-            LongPressOptions longPressOptions = new LongPressOptions();
-            longPressOptions.withElement(ElementOption.element(element));
-            touch.longPress(longPressOptions).release().perform();
-            Log.info("Long press successful on element: " + element);
-        } catch (NoSuchElementException e) {
-            Log.logError(this.getClass().getName(), "findElement", "Element not found" + locator);
-            throw e;
-        }
-
-    }
-
-    /**
-     * method to long press on specific x,y coordinates
-     *
-     * @param x x offset
-     * @param y y offset
-     */
-    public void longPress(int x, int y) {
-        TouchAction touch = new TouchAction((MobileDriver) driver);
-        PointOption pointOption = new PointOption();
-        pointOption.withCoordinates(x, y);
-        touch.longPress(pointOption).release().perform();
-        Log.info("Long press successful on coordinates: " + "( " + x + "," + y + " )");
-
-    }
-
-    /**
-     * method to long press on element with absolute coordinates.
-     *
-     * @param locator element to be long pressed
-     * @param x       x offset
-     * @param y       y offset
-     */
-    public void longPress(By locator, int x, int y) {
-        try {
-            WebElement element = driver.findElement(locator);
-            TouchAction touch = new TouchAction((MobileDriver) driver);
-            LongPressOptions longPressOptions = new LongPressOptions();
-            longPressOptions.withPosition(new PointOption().withCoordinates(x, y)).withElement(ElementOption.element(element));
-            touch.longPress(longPressOptions).release().perform();
-            Log.info("Long press successful on element: " + element + "on coordinates" + "( " + x + "," + y + " )");
-        } catch (NoSuchElementException e) {
-            Log.logError(this.getClass().getName(), "findElement", "Element not found" + locator);
-            throw e;
-        }
-
-    }
-
-    /**
+    /*
      * method to swipe on the screen on provided coordinates
      *
      * @param startX   - start X coordinate to be tapped
@@ -348,12 +292,12 @@ public class GenericMethods {
 
     /**
      * method to launchApp
-     */
+     
 
     public void launchApp() {
         ((AppiumDriver) driver).launchApp();
     }
-
+	*/
 
     /**
      * method to click on Element By Name
@@ -361,51 +305,56 @@ public class GenericMethods {
      * @param elementByName - String element name to be clicked
      */
 
-    public void click(String elementByName) {
-        ((AppiumDriver) driver).findElementByName(elementByName).click();
+    public void click(String elementByName) {    
+        driver.findElement(By.name(elementByName)).click();   
+    }
+    
+    /*
+     * method to click on Element By AndroidUIAutomator
+     *
+     * @param elementByAndroidUIAutomator - String element AndroidUIAutomator to be clicked
+     */
+    
+    public void findElementByAndroidUIAutomator(String elementByAndroidUIAutomator) {
+        driver.findElement(new AppiumBy.ByAndroidUIAutomator(elementByAndroidUIAutomator)).click();  
+        
+      
+    }
+    
+    public void findElementByiOSClassChain() {   
+        driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText['label == \"Create New File\"']"));
+        System.out.println("iOSClassChain worked");
+      
+    }
+    
+    public void findShortCutResult() {   
+        driver.findElement(AppiumBy.xpath("//*[@label='Create New File']"));
+        System.out.println("ShortCutResult Is Present");
+ 
+      
     }
 
-    /**
-     * method to scroll down on screen from java-client 6
-     *
-     * @param swipeTimes       number of times swipe operation should work
-     * @param durationForSwipe time duration of a swipe operation
-     */
-    public void scrollDown(int swipeTimes, int durationForSwipe) {
-        Dimension dimension = driver.manage().window().getSize();
-
-        for (int i = 0; i <= swipeTimes; i++) {
-            int start = (int) (dimension.getHeight() * 0.5);
-            int end = (int) (dimension.getHeight() * 0.3);
-            int x = (int) (dimension.getWidth() * .5);
-
-
-            new TouchAction((AppiumDriver) driver).press(PointOption.point(x, start)).moveTo(PointOption.point(x, end))
-                    .waitAction(WaitOptions.waitOptions(Duration.ofMillis(durationForSwipe)))
-                    .release().perform();
-        }
-    }
-
-
-    /**
-     * method to scroll up on screen from java-client 6
-     *
-     * @param swipeTimes       number of times swipe operation should work
-     * @param durationForSwipe time duration of a swipe operation
-     */
-    public void scrollUp(int swipeTimes, int durationForSwipe) {
-        Dimension dimension = driver.manage().window().getSize();
-
-        for (int i = 0; i <= swipeTimes; i++) {
-            int start = (int) (dimension.getHeight() * 0.3);
-            int end = (int) (dimension.getHeight() * 0.5);
-            int x = (int) (dimension.getWidth() * .5);
-
-
-            new TouchAction((AppiumDriver) driver).press(PointOption.point(x, start)).moveTo(PointOption.point(x, end))
-                    .waitAction(WaitOptions.waitOptions(Duration.ofMillis(durationForSwipe)))
-                    .release().perform();
-        }
+    
+    public void scrollUp() {
+    	
+    	//calculate the starting position: e.g: middle of the screen
+    	int startX = driver.manage().window().getSize().getWidth() / 2;
+    	int startY = driver.manage().window().getSize().getHeight() / 2;
+    	
+    	//calculate the ending position of the scroll/swipe
+    	//Since we will perform a vertical swipe we will only calculate the vertical coordinate. 
+    	//We will set it to be 20% of the screen height from the top
+    	int endY = (int) (driver.manage().window().getSize().getHeight() * 0.2); 
+    	
+    	PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+    	Sequence scroll = new Sequence(finger, 0);
+    	
+    	scroll.addAction(finger.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), startX, startY));
+    	scroll.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
+    	scroll.addAction(finger.createPointerMove(Duration.ofMillis(600), PointerInput.Origin.viewport(), startX, endY));
+    	scroll.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+    	((RemoteWebDriver) driver).perform(List.of(scroll));
+    	
     }
 
 

@@ -11,11 +11,13 @@
 			<package name="tests.testngTests" />			
 		</packages> -->
 		<classes>
+			
 			<class name="tests.testngTests.End2EndTests" />
 			<!-- <class name="tests.testngTests.OneToFourCardTests" />
 			<class name="tests.testngTests.NineToElevenCardTests" />
 			<class name="tests.testngTests.FiveToEightCardTests" />
 			<class name="tests.testngTests.End2EndTests" />
+			<class name="tests.testngTests.ShortcutsSearchTests" />
 			-->
 		</classes>
 	</test>

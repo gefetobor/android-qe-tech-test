@@ -4,6 +4,7 @@ import logger.Log;
 import screens.android.AndroidLandingPageScreen;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Reporter;
 
 import coreLogic.base.*;
 
@@ -37,7 +38,8 @@ public class AndroidLandingPageCoreLogic extends LandingPageCoreLogic {
         String ActualFirstDescription = androidLandingPageScreen.findElement(androidLandingPageScreen.FirstItemDescription).getText();
         String ExpectedFirstDescription = "Item description";
 		Assert.assertEquals(ExpectedFirstDescription , ActualFirstDescription);
-        Log.info("FirstItem Successfully Verified");    
+        Log.info("FirstItem Successfully Verified");  
+        Reporter.log("FirstItem Card Successfully Verified");
 
     }
     
@@ -56,7 +58,8 @@ public class AndroidLandingPageCoreLogic extends LandingPageCoreLogic {
         String ActualSecondDescription = androidLandingPageScreen.findElement(androidLandingPageScreen.SecondItemDescription).getText();
         String ExpectedSecondDescription = "Item description";
 		Assert.assertEquals(ExpectedSecondDescription , ActualSecondDescription);
-        Log.info("SecondItem Successfully Verified");    
+        Log.info("SecondItem Successfully Verified"); 
+        Reporter.log("SecondItem Card Successfully Verified");
 
     }
 
@@ -77,7 +80,8 @@ public class AndroidLandingPageCoreLogic extends LandingPageCoreLogic {
         String ActualThirdDescription = androidLandingPageScreen.findElement(androidLandingPageScreen.ThirdItemDescription).getText();
         String ExpectedThirdDescription = "Item description";
 		Assert.assertEquals(ExpectedThirdDescription , ActualThirdDescription);
-        Log.info("ThirdItem Successfully Verified");  
+        Log.info("ThirdItem Successfully Verified"); 
+        Reporter.log("ThirdItem Card Successfully Verified");
 		
 	}
 
@@ -98,7 +102,8 @@ public class AndroidLandingPageCoreLogic extends LandingPageCoreLogic {
         String ActualFourthDescription = androidLandingPageScreen.findElement(androidLandingPageScreen.FourthItemDescription).getText();
         String ExpectedFourthDescription = "Item description";
 		Assert.assertEquals(ExpectedFourthDescription , ActualFourthDescription);
-        Log.info("FourthItem Successfully Verified");  
+        Log.info("FourthItem Successfully Verified"); 
+        Reporter.log("FourthItem Card Successfully Verified");
 		
 	}
 
@@ -119,7 +124,8 @@ public class AndroidLandingPageCoreLogic extends LandingPageCoreLogic {
         String ActualFifthDescription = androidLandingPageScreen.findElement(androidLandingPageScreen.FifthItemDescription).getText();
         String ExpectedFifthDescription = "Item description";
 		Assert.assertEquals(ExpectedFifthDescription , ActualFifthDescription);
-        Log.info("FifthItem Successfully Verified");  
+        Log.info("FifthItem Successfully Verified"); 
+        Reporter.log("Fifth Card Successfully Verified");
 		
 	}
 
@@ -141,6 +147,8 @@ public class AndroidLandingPageCoreLogic extends LandingPageCoreLogic {
         String ExpectedSixthDescription = "Item description";
 		Assert.assertEquals(ExpectedSixthDescription , ActualSixthDescription);
         Log.info("SixthItem Successfully Verified");  
+
+        Reporter.log("SixthItem Card Successfully Verified");
 		
 	}
 
@@ -162,6 +170,7 @@ public class AndroidLandingPageCoreLogic extends LandingPageCoreLogic {
         String ExpectedSeventhDescription = "Item description";
 		Assert.assertEquals(ExpectedSeventhDescription , ActualSeventhDescription);
         Log.info("SeventhItem Successfully Verified");  
+        Reporter.log("SeventhItem Card Successfully Verified");
 		
 	}
 
@@ -182,7 +191,8 @@ public class AndroidLandingPageCoreLogic extends LandingPageCoreLogic {
         String ActualEightDescription = androidLandingPageScreen.findElement(androidLandingPageScreen.EightItemDescription).getText();
         String ExpectedEightDescription = "Item description";
 		Assert.assertEquals(ExpectedEightDescription , ActualEightDescription);
-        Log.info("EightItem Successfully Verified");  
+        Log.info("EightItem Successfully Verified"); 
+        Reporter.log("EightItem Card Successfully Verified");
 		
 	}
 
@@ -203,7 +213,8 @@ public class AndroidLandingPageCoreLogic extends LandingPageCoreLogic {
         String ActualNinethDescription = androidLandingPageScreen.findElement(androidLandingPageScreen.NinethItemDescription).getText();
         String ExpectedNinethDescription = "Item description";
 		Assert.assertEquals(ExpectedNinethDescription , ActualNinethDescription);
-        Log.info("NinethItem Successfully Verified");  
+        Log.info("NinethItem Successfully Verified"); 
+        Reporter.log("NinethItem Card Successfully Verified");
 		
 	}
 
@@ -224,7 +235,9 @@ public class AndroidLandingPageCoreLogic extends LandingPageCoreLogic {
         String ActualTenthDescription = androidLandingPageScreen.findElement(androidLandingPageScreen.TenthItemDescription).getText();
         String ExpectedTenthDescription = "Item description";
 		Assert.assertEquals(ExpectedTenthDescription , ActualTenthDescription);
-        Log.info("TenthItem Successfully Verified");  
+        Log.info("TenthItem Successfully Verified"); 
+
+        Reporter.log("TenthItem Card Successfully Verified");
 		
 	}
 
@@ -245,13 +258,14 @@ public class AndroidLandingPageCoreLogic extends LandingPageCoreLogic {
         String ActualEleventhDescription = androidLandingPageScreen.findElement(androidLandingPageScreen.EleventhItemDescription).getText();
         String ExpectedEleventhDescription = "Item description";
 		Assert.assertEquals(ExpectedEleventhDescription , ActualEleventhDescription);
-        Log.info("EleventhItem Successfully Verified");  
+        Log.info("EleventhItem Successfully Verified"); 
+        Reporter.log("EleventhItem Card Successfully Verified");
 		
 	}
 
 
 	@Override
-	public void searchFunctionality() throws InterruptedException {
+	public void searchFunctionality(String shortcut) throws InterruptedException {
 		// TODO Auto-generated method stub
 		
 	}
