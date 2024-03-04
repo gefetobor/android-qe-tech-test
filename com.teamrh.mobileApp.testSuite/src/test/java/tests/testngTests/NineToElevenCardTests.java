@@ -36,21 +36,21 @@ public class NineToElevenCardTests extends CreateSession {
 	@Test
 	public void ninethCardTests() throws InterruptedException {
 		Log.info("Running landing Page test");
-		landingPageCoreLogic.verifyNinethCard();;
+		landingPageCoreLogic.verifyNinethCard(localeConfigProp.getProperty("item9"), localeConfigProp.getProperty("desc"));;
 		Log.info("Verified nineth card");
 	}
 
 	@Test
 	public void tenthCardTests() throws InterruptedException {
 		Log.info("Running landing Page test");
-		landingPageCoreLogic.verifyTenthCard();;
+		landingPageCoreLogic.verifyTenthCard(localeConfigProp.getProperty("item10"), localeConfigProp.getProperty("desc"));;
 		Log.info("Verified tenth card");
 	}
 
 	@Test
 	public void eleventhCardTests() throws InterruptedException {
 		Log.info("Running landing Page test");
-		landingPageCoreLogic.verifyEleventhCard();;
+		landingPageCoreLogic.verifyEleventhCard(localeConfigProp.getProperty("item11"), localeConfigProp.getProperty("desc"));;
 		Log.info("Verified eleventh card");
 	}	
 	

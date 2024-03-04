@@ -1849,3 +1849,56 @@
 04 Mar 2024 10:22:20  INFO logger - Shutting down driver
 04 Mar 2024 10:22:26  INFO logger - Appium server stopped
 04 Mar 2024 10:22:26  INFO logger - Appium server stopped successfully
+04 Mar 2024 11:18:48  INFO logger - This is the mac os x
+04 Mar 2024 11:18:48  INFO logger - Builder is building
+04 Mar 2024 11:18:50  INFO logger - Appium started on http://0.0.0.0:5266/
+04 Mar 2024 11:18:50  INFO logger - Appium server started successfully
+04 Mar 2024 11:18:50  INFO logger - --------------------------------------
+04 Mar 2024 11:19:08  INFO logger - Android driver created
+04 Mar 2024 11:19:08  INFO logger - Running landing Page test
+04 Mar 2024 11:19:10  INFO logger - Shutting down driver
+04 Mar 2024 11:19:17  INFO logger - Appium server stopped
+04 Mar 2024 11:19:17  INFO logger - Appium server stopped successfully
+04 Mar 2024 11:23:07  INFO logger - This is the mac os x
+04 Mar 2024 11:23:07  INFO logger - Builder is building
+04 Mar 2024 11:23:09  INFO logger - Appium started on http://0.0.0.0:27421/
+04 Mar 2024 11:23:09  INFO logger - Appium server started successfully
+04 Mar 2024 11:23:09  INFO logger - --------------------------------------
+04 Mar 2024 11:23:20  INFO logger - Android driver created
+04 Mar 2024 11:23:20  INFO logger - Running landing Page test
+04 Mar 2024 11:23:22  INFO logger - Shutting down driver
+04 Mar 2024 11:23:29  INFO logger - Appium server stopped
+04 Mar 2024 11:23:29  INFO logger - Appium server stopped successfully
+04 Mar 2024 11:28:59  INFO logger - This is the mac os x
+04 Mar 2024 11:29:00  INFO logger - Builder is building
+04 Mar 2024 11:29:01  INFO logger - Appium started on http://0.0.0.0:47951/
+04 Mar 2024 11:29:01  INFO logger - Appium server started successfully
+04 Mar 2024 11:29:01  INFO logger - --------------------------------------
+04 Mar 2024 11:29:13  INFO logger - Android driver created
+04 Mar 2024 11:29:13  INFO logger - Running landing Page test
+04 Mar 2024 11:29:14  INFO logger - FirstItem Successfully Verified
+04 Mar 2024 11:29:16  INFO logger - Shutting down driver
+04 Mar 2024 11:29:21  INFO logger - Appium server stopped
+04 Mar 2024 11:29:21  INFO logger - Appium server stopped successfully
+04 Mar 2024 11:30:52  INFO logger - This is the mac os x
+04 Mar 2024 11:30:52  INFO logger - Builder is building
+04 Mar 2024 11:30:54  INFO logger - Appium started on http://0.0.0.0:44926/
+04 Mar 2024 11:30:54  INFO logger - Appium server started successfully
+04 Mar 2024 11:30:54  INFO logger - --------------------------------------
+04 Mar 2024 11:31:05  INFO logger - Android driver created
+04 Mar 2024 11:31:05  INFO logger - Running landing Page test
+04 Mar 2024 11:31:07  INFO logger - FirstItem Successfully Verified
+04 Mar 2024 11:31:07  INFO logger - SecondItem Successfully Verified
+04 Mar 2024 11:31:08  INFO logger - ThirdItem Successfully Verified
+04 Mar 2024 11:31:08  INFO logger - FourthItem Successfully Verified
+04 Mar 2024 11:31:09  INFO logger - FifthItem Successfully Verified
+04 Mar 2024 11:31:11  INFO logger - SixthItem Successfully Verified
+04 Mar 2024 11:31:12  INFO logger - SeventhItem Successfully Verified
+04 Mar 2024 11:31:12  INFO logger - EightItem Successfully Verified
+04 Mar 2024 11:31:13  INFO logger - NinethItem Successfully Verified
+04 Mar 2024 11:31:13  INFO logger - TenthItem Successfully Verified
+04 Mar 2024 11:31:13  INFO logger - EleventhItem Successfully Verified
+04 Mar 2024 11:31:13  INFO logger - E2E Tests Successful
+04 Mar 2024 11:31:13  INFO logger - Shutting down driver
+04 Mar 2024 11:31:19  INFO logger - Appium server stopped
+04 Mar 2024 11:31:19  INFO logger - Appium server stopped successfully

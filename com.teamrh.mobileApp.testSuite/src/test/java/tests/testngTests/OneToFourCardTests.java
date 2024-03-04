@@ -36,28 +36,28 @@ public class OneToFourCardTests extends CreateSession {
 	@Test
 	public void firstCardTests() throws InterruptedException {
 		Log.info("Running landing Page test");
-		landingPageCoreLogic.verifyFirstCard();;
+		landingPageCoreLogic.verifyFirstCard(localeConfigProp.getProperty("item1"), localeConfigProp.getProperty("desc"));;
 		Log.info("Verified first card");
 	}
 	
 	@Test
 	public void secondCardTests() throws InterruptedException {
 		Log.info("Running landing Page test");
-		landingPageCoreLogic.verifySecondCard();;
+		landingPageCoreLogic.verifySecondCard(localeConfigProp.getProperty("item2"), localeConfigProp.getProperty("desc"));;
 		Log.info("Verified second card");
 	}
 
 	@Test
 	public void thirdCardTests() throws InterruptedException {
 		Log.info("Running landing Page test");
-		landingPageCoreLogic.verifyThirdCard();;
+		landingPageCoreLogic.verifyThirdCard(localeConfigProp.getProperty("item3"), localeConfigProp.getProperty("desc"));;
 		Log.info("Verified third card");
 	}
 
 	@Test
 	public void fourthCardTests() throws InterruptedException {
 		Log.info("Running landing Page test");
-		landingPageCoreLogic.verifyFourthCard();;
+		landingPageCoreLogic.verifyFourthCard(localeConfigProp.getProperty("item4"), localeConfigProp.getProperty("desc"));;
 		Log.info("Verified fourth card");
 	}	
 	

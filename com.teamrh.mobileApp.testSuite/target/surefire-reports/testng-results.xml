@@ -38,16 +38,16 @@
       <![CDATA[E2E Tests Successful]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-03-04T10:22:05 GMT" name="com.teamrh.mobileApp.testSuite" finished-at="2024-03-04T10:22:21 GMT" duration-ms="16243">
+  <suite started-at="2024-03-04T11:30:54 GMT" name="com.teamrh.mobileApp.testSuite" finished-at="2024-03-04T11:31:14 GMT" duration-ms="19875">
     <groups>
     </groups>
-    <test started-at="2024-03-04T10:22:05 GMT" name="automation-tests" finished-at="2024-03-04T10:22:21 GMT" duration-ms="16243">
+    <test started-at="2024-03-04T11:30:54 GMT" name="automation-tests" finished-at="2024-03-04T11:31:14 GMT" duration-ms="19875">
       <class name="tests.testngTests.End2EndTests">
-        <test-method is-config="true" signature="invokeAppium()[pri:0, instance:tests.testngTests.End2EndTests@2d901eb0]" started-at="2024-03-04T10:22:03 GMT" name="invokeAppium" finished-at="2024-03-04T10:22:05 GMT" duration-ms="1923" status="PASS">
+        <test-method is-config="true" signature="invokeAppium()[pri:0, instance:tests.testngTests.End2EndTests@2d901eb0]" started-at="2024-03-04T11:30:52 GMT" name="invokeAppium" finished-at="2024-03-04T11:30:54 GMT" duration-ms="1955" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invokeAppium -->
-        <test-method is-config="true" signature="createDriver(java.lang.String,java.lang.reflect.Method)[pri:0, instance:tests.testngTests.End2EndTests@2d901eb0]" started-at="2024-03-04T10:22:05 GMT" name="createDriver" finished-at="2024-03-04T10:22:14 GMT" duration-ms="9124" status="PASS">
+        <test-method is-config="true" signature="createDriver(java.lang.String,java.lang.reflect.Method)[pri:0, instance:tests.testngTests.End2EndTests@2d901eb0]" started-at="2024-03-04T11:30:54 GMT" name="createDriver" finished-at="2024-03-04T11:31:05 GMT" duration-ms="10983" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -63,7 +63,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createDriver -->
-        <test-method is-config="true" signature="instantiateHelpers(java.lang.String)[pri:0, instance:tests.testngTests.End2EndTests@2d901eb0]" started-at="2024-03-04T10:22:14 GMT" name="instantiateHelpers" finished-at="2024-03-04T10:22:14 GMT" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="instantiateHelpers(java.lang.String)[pri:0, instance:tests.testngTests.End2EndTests@2d901eb0]" started-at="2024-03-04T11:31:05 GMT" name="instantiateHelpers" finished-at="2024-03-04T11:31:05 GMT" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -74,7 +74,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- instantiateHelpers -->
-        <test-method signature="EndToEndTests()[pri:0, instance:tests.testngTests.End2EndTests@2d901eb0]" started-at="2024-03-04T10:22:14 GMT" name="EndToEndTests" finished-at="2024-03-04T10:22:20 GMT" duration-ms="6410" status="PASS">
+        <test-method signature="EndToEndTests()[pri:0, instance:tests.testngTests.End2EndTests@2d901eb0]" started-at="2024-03-04T11:31:05 GMT" name="EndToEndTests" finished-at="2024-03-04T11:31:13 GMT" duration-ms="8268" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[FirstItem Card Successfully Verified]]>
@@ -114,11 +114,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- EndToEndTests -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:tests.testngTests.End2EndTests@2d901eb0]" started-at="2024-03-04T10:22:20 GMT" name="teardown" finished-at="2024-03-04T10:22:21 GMT" duration-ms="673" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tests.testngTests.End2EndTests@2d901eb0]" started-at="2024-03-04T11:31:13 GMT" name="teardown" finished-at="2024-03-04T11:31:14 GMT" duration-ms="607" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="stopAppium()[pri:0, instance:tests.testngTests.End2EndTests@2d901eb0]" started-at="2024-03-04T10:22:26 GMT" name="stopAppium" finished-at="2024-03-04T10:22:26 GMT" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="stopAppium()[pri:0, instance:tests.testngTests.End2EndTests@2d901eb0]" started-at="2024-03-04T11:31:19 GMT" name="stopAppium" finished-at="2024-03-04T11:31:19 GMT" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopAppium -->

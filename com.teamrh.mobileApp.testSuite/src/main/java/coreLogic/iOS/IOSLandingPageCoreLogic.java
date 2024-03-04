@@ -11,69 +11,7 @@ public class IOSLandingPageCoreLogic extends LandingPageCoreLogic {
 		iOSLandingPageScreen = new ShortcutsLandingPage(driver);
 	}
 
-	@Override
-	public void verifyFirstCard() throws InterruptedException {
-
-	}
-
-	@Override
-	public void verifySecondCard() throws InterruptedException {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void verifyThirdCard() throws InterruptedException {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void verifyFourthCard() throws InterruptedException {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void verifyFifthCard() throws InterruptedException { 
-
-	}
-
-	@Override
-	public void verifySixCard() throws InterruptedException {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void verifySeventhCard() throws InterruptedException {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void verifyEightCard() throws InterruptedException {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void verifyNinethCard() throws InterruptedException {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void verifyTenthCard() throws InterruptedException {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void verifyEleventhCard() throws InterruptedException {
-		// TODO Auto-generated method stub
-
-	}
+	
 
 	@Override
 	public void searchFunctionality(String shortcut) throws InterruptedException {
@@ -88,6 +26,94 @@ public class IOSLandingPageCoreLogic extends LandingPageCoreLogic {
         iOSLandingPageScreen.findShortCutResult();
         
 	
+	}
+
+
+
+	@Override
+	public void verifyFirstCard(String item, String desc) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public void verifySecondCard(String item, String desc) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public void verifyThirdCard(String item, String desc) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public void verifyFourthCard(String item, String desc) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public void verifyFifthCard(String item, String desc) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public void verifySixCard(String item, String desc) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public void verifySeventhCard(String item, String desc) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public void verifyEightCard(String item, String desc) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public void verifyNinethCard(String item, String desc) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public void verifyTenthCard(String item, String desc) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public void verifyEleventhCard(String item, String desc) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

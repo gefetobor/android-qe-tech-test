@@ -36,28 +36,28 @@ public class FiveToEightCardTests extends CreateSession {
 	@Test(priority = 0)
 	public void fifthCardTests() throws InterruptedException {
 		Log.info("Running landing Page test");
-		landingPageCoreLogic.verifyFifthCard();;
+		landingPageCoreLogic.verifyFifthCard(localeConfigProp.getProperty("item5"), localeConfigProp.getProperty("desc"));;
 		Log.info("Verified fifth card");
 	}
 
 	@Test(priority = 1)
 	public void sixthCardTests() throws InterruptedException {
 		Log.info("Running landing Page test");
-		landingPageCoreLogic.verifySixCard();
+		landingPageCoreLogic.verifySixCard(localeConfigProp.getProperty("item6"), localeConfigProp.getProperty("desc"));
 		Log.info("Verified sixth card");
 	}
 
 	@Test(priority = 3)
 	public void seventhCardTests() throws InterruptedException {
 		Log.info("Running landing Page test");
-		landingPageCoreLogic.verifySeventhCard();;
+		landingPageCoreLogic.verifySeventhCard(localeConfigProp.getProperty("item7"), localeConfigProp.getProperty("desc"));;
 		Log.info("Verified seventh card");
 	}
 
 	@Test(priority = 2)
 	public void eightCardTests() throws InterruptedException {
 		Log.info("Running landing Page test");
-		landingPageCoreLogic.verifyEightCard();;
+		landingPageCoreLogic.verifyEightCard(localeConfigProp.getProperty("item8"), localeConfigProp.getProperty("desc"));;
 		Log.info("Verified eight card");
 	}	
 	

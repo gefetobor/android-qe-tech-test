@@ -6,27 +6,27 @@ package coreLogic.base;
  */
 public abstract class LandingPageCoreLogic {
 
-	public abstract void verifyFirstCard() throws InterruptedException;
+	public abstract void verifyFirstCard(String item, String desc) throws InterruptedException;
 	
-	public abstract void verifySecondCard() throws InterruptedException;
+	public abstract void verifySecondCard(String item, String desc) throws InterruptedException;
 	
-	public abstract void verifyThirdCard() throws InterruptedException;
+	public abstract void verifyThirdCard(String item, String desc) throws InterruptedException;
 	
-	public abstract void verifyFourthCard() throws InterruptedException;
+	public abstract void verifyFourthCard(String item, String desc) throws InterruptedException;
 	
-	public abstract void verifyFifthCard() throws InterruptedException;
+	public abstract void verifyFifthCard(String item, String desc) throws InterruptedException;
 	
-	public abstract void verifySixCard() throws InterruptedException;
+	public abstract void verifySixCard(String item, String desc) throws InterruptedException;
 	
-	public abstract void verifySeventhCard() throws InterruptedException;
+	public abstract void verifySeventhCard(String item, String desc) throws InterruptedException;
 	
-	public abstract void verifyEightCard() throws InterruptedException;
+	public abstract void verifyEightCard(String item, String desc) throws InterruptedException;
 	
-	public abstract void verifyNinethCard() throws InterruptedException;
+	public abstract void verifyNinethCard(String item, String desc) throws InterruptedException;
 	
-	public abstract void verifyTenthCard() throws InterruptedException;
+	public abstract void verifyTenthCard(String item, String desc) throws InterruptedException;
 	
-	public abstract void verifyEleventhCard() throws InterruptedException;
+	public abstract void verifyEleventhCard(String item, String desc) throws InterruptedException;
 	
 	public abstract void searchFunctionality(String shortcut) throws InterruptedException;
 	
